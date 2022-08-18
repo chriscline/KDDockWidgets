@@ -165,8 +165,8 @@ void TitleBarWidget::init()
         update();
     });
 
-    m_closeButton->setEnabled(closeButtonEnabled());
-    connect(this, &TitleBar::closeButtonEnabledChanged, m_closeButton, &QAbstractButton::setEnabled);
+    m_closeButton->setVisible(closeButtonEnabled());
+    connect(this, &TitleBar::closeButtonEnabledChanged, m_closeButton, &QAbstractButton::setVisible);
 
     connect(this, &TitleBar::floatButtonToolTipChanged, m_floatButton, &QWidget::setToolTip);
     connect(this, &TitleBar::floatButtonVisibleChanged, m_floatButton, &QWidget::setVisible);
